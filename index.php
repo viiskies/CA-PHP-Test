@@ -58,7 +58,7 @@ echo $myTest->storeRandom();
 echo '<br>';
 
 echo 'Uzduotis nr. 9<br>';
-$sentence = 'this is a very simple sentence';
+$sentence = 'this is a vEry simple sentence';
 echo $sentence;
 echo '<br>';
 echo $myTest->glueText($sentence);

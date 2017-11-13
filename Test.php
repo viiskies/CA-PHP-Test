@@ -68,7 +68,7 @@ class Test
         $explodedText = explode(" ", $someText);
         $upperCaseString = '';
         foreach ($explodedText as $word) {
-            $upperCaseString .= ucfirst($word);
+            $upperCaseString .= ucfirst(strtolower($word));
         }
         return $upperCaseString;
     }
