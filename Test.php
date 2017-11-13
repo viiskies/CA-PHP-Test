@@ -2,11 +2,12 @@
 
 class Test
 {
-    public $language = 'LT';
+    public $language;
 
     function __construct()
     {
         echo 'Vytautas';
+        $this->language = 'LT';
     }
 
     public function dayToday() {
@@ -39,7 +40,7 @@ class Test
                 break;
             
             default:
-                echo 'Language will stay the same as before';
+                echo 'Language will stay the same as before<br>';
                 break;
         }
     }
@@ -61,7 +62,7 @@ class Test
         $myfile = fopen("random.txt", "w") or die("Unable to open file!");
         fwrite($myfile, $randomNumber);
         fclose($myfile);
-        return 'success';
+        return 'A random number between 1990 and 2017 was written to a file random.txt';
     }
 
     public function glueText($someText) {
