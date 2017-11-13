@@ -42,7 +42,7 @@ echo $myTest->language;
 echo '<br>';
 
 echo 'Uzduotis nr. 7<br>';
-// generate random array with 7 elements between 1 and 100
+// generate a random array with 7 elements between 1 and 100
 function generateRandomArray() {
 	for ($i=0; $i < 7 ; $i++) { 
 		$randArray[] = rand(1, 100);
