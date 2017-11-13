@@ -25,7 +25,10 @@ echo '<br>';
 
 echo 'Uzduotis nr. 4<br>';
 if ($myTest->isEven(2)) {
-	echo 'grazina TRUE';
+	echo '2 (lyginis skaicius) grazina TRUE';
+}
+if ($myTest->isEven(3)) {
+	echo '3 (nelyginis skaicius) grazina TRUE';
 }
 echo '<br>';
 
@@ -39,16 +42,28 @@ echo $myTest->language;
 echo '<br>';
 
 echo 'Uzduotis nr. 7<br>';
-print_r([148,244,52,49,55,19,1]);
-print_r($myTest->discount([148,244,52,49,55,19,1]));
+// generate random array with 7 elements between 1 and 100
+function generateRandomArray() {
+	for ($i=0; $i < 7 ; $i++) { 
+		$randArray[] = rand(1, 100);
+	}
+	return $randArray;
+}
+$newRandArray = generateRandomArray();
+print_r($newRandArray);
+print_r($myTest->discount($newRandArray));
 
 echo 'Uzduotis nr. 8<br>';
 echo $myTest->storeRandom();
 echo '<br>';
 
 echo 'Uzduotis nr. 9<br>';
-echo $myTest->glueText('this is a very simple sentence');
+$sentence = 'this is a very simple sentence';
+echo $sentence;
 echo '<br>';
+echo $myTest->glueText($sentence);
+echo '<br>';
+
 echo 'Uzduotis nr. 10<br>';
 ?>
 </pre>
