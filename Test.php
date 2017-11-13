@@ -15,17 +15,16 @@ class Test
     }
 
     public function storeToCookie() {
-
         setcookie('test_today', $this->dayToday(), time() + (86400 * 7), "/");
     }
 
-    public function isEven($num) {
+    public function isEven(int $num) {
         if ($num % 2 == 0) {
             return true;
         }
     }
 
-    public function setLanguage($lang){
+    public function setLanguage(string $lang){
         switch ($lang) {
             case 'Lithuania':
                 $this->language = 'LT';
@@ -45,7 +44,7 @@ class Test
         }
     }
 
-    public function discount($num_array) {
+    public function discount(array $num_array) {
         rsort($num_array);
         for ($i=0; $i < count($num_array) ; $i++) { 
             if ($i < 3) {
@@ -65,7 +64,7 @@ class Test
         return 'A random number between 1990 and 2017 was written to a file random.txt';
     }
 
-    public function glueText($someText) {
+    public function glueText(string $someText) {
         $explodedText = explode(" ", $someText);
         $upperCaseString = '';
         foreach ($explodedText as $word) {
